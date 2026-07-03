@@ -118,6 +118,34 @@ document.addEventListener('DOMContentLoaded', () => {
     stageObserver.observe(stage);
   }
 
+  /* ---- Video autoplay on scroll ---- */
+  const setupVideoAutoplay = (videoId) => {
+    const video = document.getElementById(videoId);
+    if (video) {
+      const videoContainer = video.closest('.video-container');
+      const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            video.play().catch(err => {
+              console.log('Video autoplay prevented by browser policy');
+            });
+          } else {
+            video.pause();
+          }
+        });
+      }, { threshold: 0.25 });
+
+      if (videoContainer) {
+        videoObserver.observe(videoContainer);
+      } else {
+        videoObserver.observe(video);
+      }
+    }
+  };
+
+  setupVideoAutoplay('motionVideo');
+  setupVideoAutoplay('discSpaceVideo');
+
   /* ---- Sizing matrix interactions ---- */
   const heightBtns = document.querySelectorAll('.height-btn');
   heightBtns.forEach(btn => {
