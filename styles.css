@@ -518,6 +518,71 @@ footer .foot-col a:hover {
   transition: border-color .3s;
 }
 
+.choice-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: contents;
+}
+
+.choice-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  margin-top: 20px;
+}
+
+.choice-card:hover .choice-dropdown {
+  opacity: 1;
+  visibility: visible;
+  max-height: 500px;
+}
+
+.choice-dropdown h4 {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.choice-card.pro .choice-dropdown h4 {
+  color: #8A9DC0;
+}
+
+.choice-card.patient .choice-dropdown h4 {
+  color: var(--blue-deep);
+}
+
+.choice-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.choice-dropdown li a {
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 1.4;
+  transition: opacity 0.2s ease;
+  opacity: 0.85;
+}
+
+.choice-card.patient .choice-dropdown li a {
+  color: var(--blue-deep);
+}
+
+.choice-card.pro .choice-dropdown li a {
+  color: #8A9DC0;
+}
+
+.choice-dropdown li a:hover {
+  opacity: 1;
+}
+
 .home-strip {
   border-top: 1px solid var(--line);
   padding: 46px 0 70px;
