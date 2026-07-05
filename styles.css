@@ -2834,8 +2834,8 @@ ul.check-list li svg {
 
 .motion-image {
   margin: 0;
-  padding: 24px;
-  background: var(--white);
+  padding: 0;
+  background: #000;
   border-radius: 16px;
   box-shadow: var(--shadow-1);
   overflow: hidden;
