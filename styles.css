@@ -2861,6 +2861,7 @@ ul.check-list li svg {
 
 .motion-image--contain video {
   object-fit: contain;
+  transform: scale(1.2);
 }
 
 .motion-item h4 {
