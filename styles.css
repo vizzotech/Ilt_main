@@ -2859,6 +2859,10 @@ ul.check-list li svg {
   display: block;
 }
 
+.motion-image--contain video {
+  object-fit: contain;
+}
+
 .motion-item h4 {
   font-size: 16px;
   font-weight: 600;
