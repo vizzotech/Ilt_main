@@ -146,6 +146,20 @@ document.addEventListener('DOMContentLoaded', () => {
   setupVideoAutoplay('motionVideo');
   setupVideoAutoplay('discSpaceVideo');
 
+  /* ---- Motion grid video autoplay for Safari ---- */
+  const motionVideos = document.querySelectorAll('.motion-grid video');
+  motionVideos.forEach(video => {
+    video.addEventListener('canplay', () => {
+      video.play().catch(err => {
+        console.log('Video autoplay prevented');
+      });
+    });
+    // Try to play immediately
+    video.play().catch(err => {
+      console.log('Autoplay blocked, will retry on user interaction');
+    });
+  });
+
   /* ---- Sizing matrix interactions ---- */
   const heightBtns = document.querySelectorAll('.height-btn');
   heightBtns.forEach(btn => {
