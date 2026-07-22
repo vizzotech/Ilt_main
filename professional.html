@@ -210,38 +210,25 @@
           <h2>Device motion & design</h2>
           <p class="sub">Visual representation of the ILT Spine device movement and positioning characteristics.</p>
 
-          <div class="motion-grid reveal">
-            <div class="motion-item">
-              <figure class="motion-image motion-image--contain">
-                <video autoplay muted loop playsinline preload="auto">
-                  <source src="assets/Video/cage_front.mp4" type="video/mp4">
-                </video>
-              </figure>
-              <h4>Lateral bending (10°)</h4>
+          <div class="video-container">
+            <video id="motionVideo" width="100%" height="auto" controls
+              poster="assets/images/ILT_Animation_thumbnail.png">
+              <source src="assets/Video/ILT_Animation_no_water.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-features">
+            <div class="feature-item">
+              <span class="feature-label">Flexion & Extension</span>
+              <p>10° of forward and backward bending motion</p>
             </div>
-            <div class="motion-item">
-              <figure class="motion-image">
-                <video autoplay muted loop playsinline preload="auto">
-                  <source src="assets/Video/cage_side.mp4" type="video/mp4">
-                </video>
-              </figure>
-              <h4>Flexion and Extension (10°)</h4>
+            <div class="feature-item">
+              <span class="feature-label">Rotation</span>
+              <p>Unlimited rotational movement</p>
             </div>
-            <div class="motion-item">
-              <figure class="motion-image">
-                <video autoplay muted loop playsinline preload="auto">
-                  <source src="assets/Video/cage_top.mp4" type="video/mp4">
-                </video>
-              </figure>
-              <h4>Unlimited Rotation</h4>
-            </div>
-            <div class="motion-item">
-              <figure class="motion-image motion-image--contain">
-                <video autoplay muted loop playsinline preload="auto">
-                  <source src="assets/Video/Cage_Translation.mp4" type="video/mp4">
-                </video>
-              </figure>
-              <h4>Translation</h4>
+            <div class="feature-item">
+              <span class="feature-label">Lateral Bending</span>
+              <p>Side-to-side motion preserved</p>
             </div>
           </div>
         </section>
